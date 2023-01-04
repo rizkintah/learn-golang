@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "learn-go/library"
 
 func main() {
-	fmt.Println("Hallo")
+	library.UlangData(10)
 }
