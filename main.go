@@ -2,15 +2,26 @@ package main
 
 import (
 	"fmt"
-	"learn-go/library"
 )
 
 func main() {
-	fmt.Println("Hello World")
-	library.UlangData(10)
+	cartOne := newCart("User 1")
 
-	var s0 = library.Student{"Rizkinta", 10}
-	fmt.Println("Nama akan diubah")
-	s0.SetName("Tata")
+	// add items
+	items := []item{
+		{
+			itemName: "Flanel",
+			qty:      2,
+			price:    150000,
+		},
+		{
+			itemName: "Jeans Denim",
+			qty:      1,
+			price:    500000,
+		},
+	}
 
+	cartOne.addItems(items...)
+
+	fmt.Println(cartOne)
 }
